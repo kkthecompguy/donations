@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 
+ENVIRONMENT = os.getenv('ENVIRONMENT', 'development')
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -25,7 +27,7 @@ SECRET_KEY = 'jc883vj%pci5jgaavk^rniiwk1x!k(-e$^=ac1_-v5vh7p#v95'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['buysamcoffee.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -132,7 +134,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STRIPE_SECRET_KEY = 'sk_test_MxRSoFneuCeClAYx1A8dA5Ki00p1bmnqDH'
 
-if os.getcwd() == '/app':
+if ENVIRONMENT == 'production':
     DEBUG = False
     SECRET_KEY = os.getenv('SECRET_KEY')
     SESSION_COOKIE_SECURE = True
