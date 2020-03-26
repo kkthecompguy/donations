@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+  <script src="https://js.stripe.com/v3/"></script>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <title>Buy Sam Coffee</title>
+</head>
+<body>
+  {% if messages %}
+    {% for message in messages %}
+      <div class="alert alert-{{message.tags}}">
+        {{message}}
+      </div>
+    {% endfor %}
+  {% endif %}
+
+
+  {%  block content %}
+  {% endblock %}
+
+  <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

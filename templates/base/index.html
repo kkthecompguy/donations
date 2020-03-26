@@ -1,0 +1,69 @@
+{%  extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <div>
+    <div class="wrapper">
+      <div class="column-6">
+        <div id="left-wrapper">
+          <img src="{% static 'media/me.jpg' %}" alt="Profile pic" id="profile-pic">
+          <div id="left-wrapper-header">
+            <h3>Buy Me Coffee</h3>
+            <h5>One Time Donation</h5>
+          </div>
+          <div style="clear: left;"></div>
+          <hr>
+          <!-- Stripe form -->
+          <form action="{% url 'base:charge' %}" method="post" id="payment-form">
+            {% csrf_token %}
+            <div class="form-field-12">
+              <label for="amount">Choose Amount:</label>
+              <br>
+              <br>
+              <select required name="amount" id="amount">
+                <option value="">--choose amount  --</option>
+                <option value="5">A $5 coffee is available</option>
+                <option value="10">A $10 coffee is available</option>
+                <option value="25">A $25 coffee is available</option>
+              </select>
+            </div>
+
+            <div class="form-field-6">
+              <input type="email" name="email" id="email" placeholder="someone@example.com">
+            </div>
+            <div class="form-field-6">
+              <input type="text" name="name" id="name" placeholder="Your nickname">
+            </div>
+            <div class="form-row">
+              <label for="card-element">
+                Credit or debit card
+              </label>
+              <div id="card-element">
+                <!-- A Stripe Element will be inserted here. -->
+              </div>
+          
+              <!-- Used to display form errors. -->
+              <div id="card-errors" role="alert"></div>
+            </div>
+            <div style="clear: left;"></div>
+            <hr>
+          
+            <input type="submit" value="Submit Payment" class="myButton" style="background-color: #10a195;">
+          </form>
+        </div>
+      </div>
+      <div class="column-6">
+      <div id="right-wrapper">
+        <img src="{% static 'media/Coffee5.png' %}" alt="Coffee 5" class="coffee-cup">
+        <img src="{% static 'media/Coffee10.png' %}" alt="Coffee 10" class="coffee-cup2">
+        <img src="{% static 'media/Coffee25.png' %}" alt="Coffee 25" class="coffee-cup3">
+        <h3>If you consider this as of willing heart please thank you once more</h3>
+        <p>This pandemic of covid-19 has rendered some sources not functioning, Right now am working on some cool projects and I really need to pay some bills. :) At no point should you feel obligated to donate but if have the means please consider the worth of giving. God bless you and stay safe with your family</p>
+        <div>
+        <a href="https://github.com/kkthecompguy" target="_blank" class="myButton2" style="background-color: #10a195;">View Profile</a>
+        </div>
+      </div>
+      </div>
+  </div>
+</div>
+{% endblock %}

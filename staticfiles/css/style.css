@@ -1,0 +1,237 @@
+/**
+ * The CSS shown here will not be introduced in the Quickstart guide, but shows
+ * how you can use CSS to style your Element's container.
+ */
+ .StripeElement {
+  box-sizing: border-box;
+
+  height: 40px;
+
+  padding: 10px 12px;
+
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: white;
+
+  box-shadow: 0 1px 3px 0 #e6ebf1;
+  -webkit-transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
+}
+
+.StripeElement--focus {
+  box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--invalid {
+  border-color: #fa755a;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}
+/* Stripe element element end here */
+
+
+/* Landing Page */
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 3%;
+}
+
+body{
+  background-color: #f8f8f8;
+}
+
+h3, h5 {
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: 100;
+}
+
+h3 {
+  font-size: 36px;
+}
+
+h5 {
+  font-size: 26px;
+}
+
+p, label {
+  font-family: 'Inter', sans-serif;
+}
+
+hr {
+  color: #fff;
+  background-color: #fff;
+  border-top: 1px solid #fff;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+.column-6 {
+  width: 50%;
+  float: left;
+}
+
+#left-wrapper {
+  background-color: #72cca7;
+  box-shadow: 0 1px 3px 0 #dce0ef;
+  border-radius: 4px;
+  padding: 30px;
+}
+
+#right-wrapper {
+  padding: 30px;
+}
+
+#profile-pic {
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  float: left;
+}
+
+#left-wapper-header {
+ min-width: 50%;
+ float: left;
+ padding-left: 40px;
+ margin-left: 20px; 
+}
+
+#left-wrapper-header h3 {
+  color: #fff;
+}
+
+#right-wrapper h3 {
+  color: #10a195;
+}
+
+.coffee-cup {
+  margin-left: 20px;
+  width: 100px;
+}
+
+.coffee-cup2 {
+  margin-left: 20px;
+  width: 150px;
+}
+
+.coffee-cup3 {
+  margin-left: 20px;
+  width: 200px;
+}
+
+.form-field-12 {
+  width: 100%;
+  margin-bottom: 10px;
+  padding-top: 5px;
+}
+
+.form-field-6 {
+  width: 50%;
+  float: left;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+select {
+  width: 100%;
+  height: 60px;
+  box-shadow: 0 1px 3px 0 #dce0e6;
+  padding: 10px 12px;
+  border-radius: 4px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  font-size: 1rem;
+  color: #44464a;
+}
+
+input {
+  box-shadow: 0 1px 3px 0 #dce0e6;
+  height: 30px;
+  width: 100%;
+  border-radius: 4px;
+  background-color: #fff;  
+}
+
+.myButton {
+  display: block;
+  border: none;
+  width: 100%;
+  padding: 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  transition: .3s;
+  color: #fff;
+}
+
+.myButton2 {
+  display: block;
+  border: none;
+  width: 90%;
+  padding: 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  transition: .3s;
+  color: #fff;
+}
+
+
+#right-wrapper div {
+  text-align: center;
+}
+
+.myButton:hover {
+  opacity: .6;
+}
+
+.myButton2:hover {
+  opacity: .6;
+}
+
+@media(max-width:1200px) {
+  .column-6 {
+    width: 100%;
+  }
+
+}
+
+@media(max-width: 800px) {
+  .coffee-cup {
+    margin-left: 20px;
+    width: 50px;
+  }
+  .coffee-cup2 {
+    margin-left: 20px;
+    width: 75px;
+  }
+  .coffee-cup3 {
+    margin-left: 20px;
+    width: 100px;
+  }
+}
+
+@media(max-width:392px){
+  .form-field-6 {
+    width: 100%;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  hr {
+    margin-top: 7px;
+    margin-bottom: 20px;
+  }
+
+  h5 {
+    padding-top: 10px;
+  }
+}
+
